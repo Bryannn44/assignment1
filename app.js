@@ -6,7 +6,7 @@ console.log(BryanSor_L1.convertCalculator(2, "Malaysia"));
 
 console.log (BryanSor_L1.checkCurrRate("US"));
 
-console.log(BryanSor_L1.depositCash(10, "a"));
+console.log(BryanSor_L1.depositCash(1, 1));
 
 console.log(BryanSor_L1.withdrawCash(9, 2));
 

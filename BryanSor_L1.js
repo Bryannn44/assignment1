@@ -8,54 +8,54 @@ module.exports = {
         if(i != this.PIN){
             return "Wrong PIN. Please try again!";
         }else{
-            return "Success";
+            return "Successfully Login";
         }
     },
 
     // #2 Convert calculator
-    convertCalculator : function(a, i) {
-        if(i == "Malaysia"){
-            a = a * 3.48;
-            return a +"RM"
+    convertCalculator : function(amount, country) {
+        if(country == "Malaysia"){
+            amount = amount * 3.48;
+            return amount +"RM"
         }
-        else if(i == "US"){
-            a = a * 0.73;
-            return a +"USD"
+        else if(country == "US"){
+            amount = amount * 0.73;
+            return amount +"USD"
         }
-        else if(i == "Euro"){
-            a = a * 0.69
-            return a +"€"
+        else if(country == "Euro"){
+            amount = amount * 0.69
+            return amount +"€"
         }
     },
 
     // #3 Check the currency rate of the country 
-    checkCurrRate : function(a) {
-        if (a == "US"){
+    checkCurrRate : function(country) {
+        if (country == "US"){
             return "US currency rate is 0.73"
         }
-        else if(a == "Malaysia"){
+        else if(country == "Malaysia"){
             return "Malaysia currency rate is 3.48";
         }
-        else if(a == "Euro"){
+        else if(country == "Euro"){
             return "Euro currency rate is 0.69";
         }
     },
 
     //#4 Deposit cash
-    depositCash : function(a, i) {
-        if (a > 0) {
-          this.accounts[i] += a;
-          return "You just deposited $" + a + " and your total is $" + this.accounts[i];
-        } else {
+    depositCash : function(cash, i) {
+        if (cash > 0) {
+          total = this.accounts[i] += cash;
+          return "You just deposited $" + cash + " and your total is $" + total;
+        } else{
           return "Invalid amount";
         }
       },
 
     //#5 Withdraw Cash
-    withdrawCash : function(a, i){
-        if(a < this.accounts[i]){
-            balance = this.accounts[i] - a;
-            return "You have withdraw $" + a + " and left with $" + balance + " in the bank"; 
+    withdrawCash : function(cash, i){
+        if(cash < this.accounts[i]){
+            balance = this.accounts[i] - cash;
+            return "You have withdraw $" + cash + " and left with $" + balance + " in the bank"; 
         }
         else{
             return "You dont have that much money in this account"
