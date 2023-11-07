@@ -1,8 +1,19 @@
 module.exports = {
     accounts : [1, 6, 10, 9, 43],
-    
-    // #1 Convert calculator
-    convertCalculator(a, i) {
+
+    PIN : 123456,
+
+    // #1 PIN Code Authentication
+    authenticatePinCode : function(i){
+        if(i != this.PIN){
+            return "Wrong PIN. Please try again!";
+        }else{
+            return "Success";
+        }
+    },
+
+    // #2 Convert calculator
+    convertCalculator : function(a, i) {
         if(i == "Malaysia"){
             a = a * 3.48;
             return a +"RM"
@@ -17,8 +28,8 @@ module.exports = {
         }
     },
 
-    // #2 Check the currency rate of the country 
-    checkCurrRate(a) {
+    // #3 Check the currency rate of the country 
+    checkCurrRate : function(a) {
         if (a == "US"){
             return "US currency rate is 0.73"
         }
@@ -30,8 +41,8 @@ module.exports = {
         }
     },
 
-    //#3 Deposit cash
-    depositCash(a, i) {
+    //#4 Deposit cash
+    depositCash : function(a, i) {
         if (a > 0) {
           this.accounts[i] += a;
           return "You just deposited $" + a + " and your total is $" + this.accounts[i];
@@ -40,8 +51,8 @@ module.exports = {
         }
       },
 
-    //#4 Withdraw Cash
-    withdrawCash(a, i){
+    //#5 Withdraw Cash
+    withdrawCash : function(a, i){
         if(a < this.accounts[i]){
             balance = this.accounts[i] - a;
             return "You have withdraw $" + a + " and left with $" + balance + " in the bank"; 
@@ -51,10 +62,4 @@ module.exports = {
         }
     },
 
-    //#5 Delete account
-    deleteAccount(i){
-        delete this.accounts[i];
-        console.log("Account deleted")
-        return(this.accounts)
-    }
 }
