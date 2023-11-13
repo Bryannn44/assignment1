@@ -56,6 +56,6 @@ Add this into your **app.js**: `console.log(nodeModule.depositCash(cash, account
 
 ### **Function 7 : Withdraw Cash** 
 
-This function allows the user to withdraw any amount of cash from one of the accounts in the array. If amount is more than the amount, "You dont have that much money in this account" text will appear. 
+This function allows the user to withdraw any amount of cash from one of the accounts in the array. If amount is more than what the account has, "You dont have that much money in this account" text will appear. 
 
 Add this into your **app.js**: `console.log(nodeModule.withdrawCash(amount, account you want to withdraw from);`
