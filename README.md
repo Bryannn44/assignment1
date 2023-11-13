@@ -23,7 +23,7 @@ Add this into your **app.js**: `console.log(nodeMoudle.listOfRate());`
 
 ### **Function 3 : Currency Calcaulator**
 
-This function helps to calculate the amount from the country they have entered. If the amount is set to 2 and country is US, the amount will be converted the amount in US currency. 
+This function helps to calculate the amount from the country they have entered. If the amount is set to 2 and country is US, the amount will be converted into US currency. 
 
 Add this into your **app.js**: `console.log(nodeModule.convertCalculator(Your amount, The country you want));`
 
