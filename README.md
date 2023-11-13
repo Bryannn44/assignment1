@@ -1,6 +1,6 @@
 # Assignment 1
 
-Import const nodeModule = require("./BryanSor_WebAPIDevelopment.js");
+Add this first before calling the functions: `Import const nodeModule = require("./BryanSor_WebAPIDevelopment.js");`
 
 
 ### **Function 1 : AuthenticatePinCode**
