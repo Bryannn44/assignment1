@@ -1,6 +1,6 @@
 # Assignment 1
 
-Add this first before calling the functions: `Import const nodeModule = require("./BryanSor_WebAPIDevelopment.js");`
+Create a **app.js** and  import this module to use the functions : `Import const nodeModule = require("./BryanSor_WebAPIDevelopment.js");`
 
 
 ### **Function 1 : AuthenticatePinCode**
