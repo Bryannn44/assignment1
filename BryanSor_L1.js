@@ -103,7 +103,7 @@ module.exports = {
     depositCash : function(cash, i) {
         if (cash > 0) {
           total = accounts[i] += cash;
-          return "You just deposited $" + cash + " and your total is $" + total;
+          return "You just deposited $" + cash + " into account " + i + " and your total is $" + total;
         } else{
           return "Invalid amount";
         }
@@ -113,7 +113,7 @@ module.exports = {
     withdrawCash : function(cash, i){
         if(cash < accounts[i]){
             balance = accounts[i] - cash;
-            return "You have withdraw $" + cash + " and left with $" + balance + " in the bank"; 
+            return "You have withdraw $" + cash + " from account " + i + " and left with $" + balance + " in the bank"; 
         }
         else{
             return "You dont have that much money in this account"
