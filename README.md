@@ -41,7 +41,7 @@ Add this into your **app.js**: `console.log (nodeModule.checkCurrRate(The countr
 
 This function will list out all the accounts and the amount they have
 
-Add this into your **app.js**: `console.log(nodeMoudle.listOfAccounts());`
+Add this into your **app.js**: `console.log(nodeModule.listOfAccounts());`
 
 
 #
